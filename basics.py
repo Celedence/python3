@@ -23,8 +23,14 @@ html = """
 </html>
 """
 
-
 soup = BeautifulSoup(html, "html.parser")
-print(soup)
-print(type(soup))
-# type returns the <class 'bs4.BeautifulSoup'>
+# print(soup)
+# print(type(soup))
+# # type returns the <class 'bs4.BeautifulSoup'>
+# d = soup.body.ol
+# print(d)
+
+f = soup.select("#first")
+print(f)
+p = soup.find_all("div")
+print(p)
