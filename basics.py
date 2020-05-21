@@ -9,7 +9,16 @@ html = """
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="first">
+        <h3 data-example="yes">Hi</h3>
+        <p> more text</p>
+    </div>
+    <ol>
+        <li class="special">list one</li>
+        <li class="special">list two</li>
+        <li>list three</li>
+    </ol>
+    <div>bye</div>
 </body>
 </html>
 """
