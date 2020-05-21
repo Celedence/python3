@@ -24,6 +24,10 @@ html = """
 """
 
 soup = BeautifulSoup(html, "html.parser")
+# data = soup.body.contents[1].next_sibling.next_sibling
+# data = soup.find(class_="special").parent
+data = soup.find(id="first").find_next_sibling()
+print(data)
 # print(soup)
 # print(type(soup))
 # # type returns the <class 'bs4.BeautifulSoup'>
@@ -32,7 +36,7 @@ soup = BeautifulSoup(html, "html.parser")
 
 # f = soup.select("#first")
 # print(f)
-# p = soup.find_all("div")[1]
-# using a for loop to loop through the divs
-for p in soup.select("div"):
-    print(p.get_text())
+# # p = soup.find_all("div")[1]
+# # using a for loop to loop through the divs
+# for p in soup.select("div"):
+#     print(p.get_text())
