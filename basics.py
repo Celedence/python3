@@ -30,7 +30,9 @@ soup = BeautifulSoup(html, "html.parser")
 # d = soup.body.ol
 # print(d)
 
-f = soup.select("#first")
-print(f)
-p = soup.find_all("div")
-print(p)
+# f = soup.select("#first")
+# print(f)
+# p = soup.find_all("div")[1]
+# using a for loop to loop through the divs
+for p in soup.select("div"):
+    print(p.get_text())
