@@ -40,7 +40,7 @@ quotes = scrape_quotes()
 with open("quotes.csv", "w") as file:
     headers = ["text","author","bio_link"]
     csv_writer = DictWriter(file, fieldnames=headers)
-    csv_writer.writerheader()
+    csv_writer.writeheader()
     for quote in quotes:
         csv_writer.writerow(quotes)
     
